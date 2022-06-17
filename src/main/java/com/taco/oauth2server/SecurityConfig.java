@@ -22,7 +22,6 @@ public class SecurityConfig {
             .formLogin()
             .and().build();
   }
-
   @Bean
   public UserDetailsService userDetailsService(UserRepository userRepository) {
     return username -> userRepository.findByUsername(username);
